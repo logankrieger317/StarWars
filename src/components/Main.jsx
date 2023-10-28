@@ -6,6 +6,7 @@ import PeopleList from './PeopleList'
 import SpeciesList from './SpeciesList'
 import VehicleList from './VehiclesList'
 import FilmsList from './FilmsList'
+import FilmsTest from './FilmsTest'
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -30,10 +31,11 @@ function Main() {
           <Route path='/SpeciesList' element={<SpeciesList/>}/>
           <Route path='/VehiclesList' element={<VehicleList/>}/>
           <Route path='/FilmsList' element={<FilmsList/>}/>
+          <Route path='/FilmsTest' element={<FilmsTest/>}/>
 
         </Routes>
      
-
+      
 
      </div>
     </>

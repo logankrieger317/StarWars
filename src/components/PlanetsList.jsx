@@ -12,18 +12,13 @@ useEffect(() => {
 
   const getPlanets = async () => {
     const response = await axios.get(`${BASE_URL}/planets`)
-    console.log(response.data.results)
-
-    
     setPlanets(response.data.results)
   }
   getPlanets()
 }, [])
 
-  console.log(planets)
-
   if (!planets) {
-    return <div>Loading...</div>
+    return <div className='Loading'>Loading...</div>
   }else{
 
   return (
@@ -31,12 +26,19 @@ useEffect(() => {
     <div className='card'>
       {planets.map((planets) => (
         <div id='card' key={planets.name}>
+          <div className='card-front'>
           <h2>{planets.name}</h2>
           <p>Gravity: {planets.gravity}</p>
           <p>Climate: {planets.terrain}</p>
           <p>Population: {planets.population}</p>
           <p>Orbital Period: {planets.orbital_period} days</p>
-          <p></p>
+          </div>
+          <div className="card-back">
+          <h1>Planet Name</h1>
+          <p>This is The Back Of the Card</p>
+          <p>This is The Back Of the Card</p>
+          <p>This is The Back Of the Card</p>
+          </div>
         </div>
       ))}
     </div>

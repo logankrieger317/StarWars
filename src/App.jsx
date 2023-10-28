@@ -18,6 +18,7 @@ function App() {
   const [films, setFilms] = useState([])
   const [species, setSpecies] = useState([])
   const [vehicles, setVehicles] = useState([])
+  const [test,setTest]=useState([])
 
 
 useEffect(() => {
@@ -67,6 +68,13 @@ useEffect(() => {
   }
   getVehicles()
 }, [])
+
+useEffect(() =>{
+  const getTest = async () => {
+    const response = await axios.get(`${BASE_URL}`)
+    setTest(response)
+  }
+})
 
   return (
     <>

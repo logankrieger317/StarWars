@@ -12,6 +12,7 @@ function Nav() {
       <Link className="nav-link" to="/SpeciesList">Species</Link>
       <Link className="nav-link" to="/VehiclesList">Vehicle</Link>
       <Link className="nav-link" to="/FilmsList">Films</Link>
+      <Link className="nav-link" to="/FilmsTest">TESTTEST</Link>
     </div>
   );
 }

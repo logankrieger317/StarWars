@@ -72,7 +72,6 @@
 }
 
 .star-wars {
-  /* display: hidden; */
   display: flex;
   justify-content: center;
   position: relative;
@@ -135,6 +134,17 @@
 
 }
 
+/* .card-front:hover{
+  display:none;
+} */
+
+.card-back{
+  display:none;
+}
+.card-back:hover{
+  display:block;
+}
+
 .card::-webkit-scrollbar{
   display: none;
 }
@@ -150,7 +160,6 @@
 
 /* twinkling lights background animation and styling */
 .background-container {
-  /* position: fixed; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -172,7 +181,6 @@
   width: 98vw;
   height: 100%;
   background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-  /* background-size: 1000px 1000px; */
   position: absolute;
   right: 0;
   top: 0;
@@ -230,7 +238,6 @@
   }
 
 }
-
 /* Logo */
 
 .logo {
@@ -247,3 +254,5 @@
   height: 10vw;
   margin: 5%;
 }
+
+
