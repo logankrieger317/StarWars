@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <div className="nav">
+    
       <Link className="nav-link" to="/Home">Home</Link>
       <Link className="nav-link" to="/StarshipsList">Starships</Link>
       <Link className="nav-link" to="/PlanetsList">Planets</Link>

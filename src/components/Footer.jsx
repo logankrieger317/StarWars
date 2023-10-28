@@ -1,12 +1,14 @@
-import Nav from "./Nav"
+
 
 function Header() {
   
 
   return (
     <>
-     <h3>In A Galaxy Far Far Away...</h3>
-     <Nav/>
+    <div className="Footer">
+     <h3>A long time ago in a galaxy far, far away...</h3>
+     
+     </div>
     </>
   )
 }

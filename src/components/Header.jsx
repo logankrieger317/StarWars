@@ -7,9 +7,9 @@ function Header() {
   return (
     <>
     <div className="Header">
-     <h1>Star Wars</h1>
-     <Nav/>
-     </div>
+      <img className='logo' src="logo.svg"/>
+      <Nav/>
+    </div>
     </>
   )
 }
