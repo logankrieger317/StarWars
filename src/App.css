@@ -1,0 +1,229 @@
+.App{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  width: 100vw;
+  color: #feda4a;
+}
+
+
+.home-container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-content{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  
+  
+}
+
+/* Nav Buttons */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: black;
+  color: #feda4a;
+  text-decoration: none;
+  font-family: 'Pathway Gothic One', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 2;
+}
+
+.nav-link:hover {
+  background-color: #feda4a;
+  color: black;
+}
+
+/* Scrolling Background Text */
+.fade {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  opacity: 10%;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: -1;
+}
+
+.star-wars {
+  /* display: hidden; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+  width: 90vw;
+  overflow: hidden;
+  color: rgb(254, 218, 74);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 200px;
+  text-align: justify;
+  opacity: 100%;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s  infinite;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: -100px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+.contentBox{
+  height: 70vh;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card{
+  overflow: auto;
+  width: 50%;
+  
+
+}
+
+.card::-webkit-scrollbar{
+  display: none;
+}
+
+#card{
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 9px 30px 0px rgba(254, 218, 74, 0.8);
+  margin:4%; 
+}
+
+/* twinkling lights background animation and styling */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -2;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  animation: move-background 10s linear infinite;
+
+}
+
+img {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: 0;
+  right: 20px;
+}
+
+@keyframes move-background {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  10% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  20% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  30% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  40% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  50% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  70% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  80% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  90% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+}
