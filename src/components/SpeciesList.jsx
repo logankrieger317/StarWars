@@ -1,13 +1,13 @@
 // import App from "../App"
+import { useNavigate,Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 const SpeciesList = () => {
  const [species, SpeciesList] = useState([])
-  // const [selectedShip, setSelectedShip] = useState(null)
-
-
+  const navigate =useNavigate()
+ 
 useEffect(() => {
 
   const getSpecies = async () => {
@@ -20,9 +20,11 @@ useEffect(() => {
   getSpecies()
 }, [])
 
-  console.log(species)
+  function getLastId(url) {
+    return parseInt(url.split('/').slice(-2, -1)[0], 10);
+}
 
-  if (!species) {
+  if (species === 0) {
     return <div>Loading...</div>
   }else{
 
@@ -30,21 +32,12 @@ useEffect(() => {
     <div className='contentBox'>
     <div className='card'>
       {species.map((species) => (
+        <Link to={`/species/${getLastId(species.url)}`}>
         <div id='card' key={species.name}>
           <h2>{species.name}</h2>
-          {/* <p>Model: {starShip.model}</p>
-          <p>Manufacturer: {starShip.manufacturer}</p>
-          <p>Cost in credits: {starShip.cost_in_credits}</p>
-          <p>Length: {starShip.length}</p>
-          <p>Max atmosphering speed: {starShip.max_atmosphering_speed}</p>
-          <p>Crew: {starShip.crew}</p>
-          <p>Passengers: {starShip.passengers}</p>
-          <p>Cargo capacity: {starShip.cargo_capacity}</p>
-          <p>Consumables: {starShip.consumables}</p>
-          <p>Hyperdrive rating: {starShip.hyperdrive_rating}</p>
-          <p>MGLT: {starShip.MGLT}</p>
-          <p>Starship class: {starShip.starship_class}</p>  */}
+
         </div>
+        </Link>
       ))}
     </div>
     </div>

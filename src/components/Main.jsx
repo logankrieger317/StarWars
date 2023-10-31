@@ -6,15 +6,19 @@ import PeopleList from './PeopleList'
 import SpeciesList from './SpeciesList'
 import VehicleList from './VehiclesList'
 import FilmsList from './FilmsList'
-import FilmsTest from './FilmsTest'
-
+import FilmsPage from './FilmsPage'
+import StarshipsPage from './StarshipsPage'
+import PeoplePage from './PeoplePage'
+import PlanetsPage from './PlanetsPage'
+import SpeciesPage from './SpeciesPage'
+import VehiclePage from './VehiclePage'
 import { Routes, Route } from 'react-router-dom'
 
 
-function Main() {
-  
-  
 
+
+
+function Main() {
   return (
     <> 
     <div className="Main">
@@ -24,14 +28,20 @@ function Main() {
        <Routes>
           <Route path='/Nav' element={<Nav/>}/>
           <Route path='/Home' element={<Home/>}/>
-          <Route path='/PlanetsList' element={<PlanetsList/>}/>
-          <Route path='/StarshipsList' element={<StarshipsList/>}/>
-          <Route path='/PeopleList' element={<PeopleList/>}/>
+          <Route path='/planets' element={<PlanetsList/>}/>
+          <Route path='/starships' element={<StarshipsList/>}/>
+          <Route path='/people' element={<PeopleList/>}/>
           <Route path='/' element={<Home/>}/>
-          <Route path='/SpeciesList' element={<SpeciesList/>}/>
-          <Route path='/VehiclesList' element={<VehicleList/>}/>
-          <Route path='/FilmsList' element={<FilmsList/>}/>
-          <Route path='/FilmsTest' element={<FilmsTest/>}/>
+          <Route path='/species' element={<SpeciesList/>}/>
+          <Route path='/vehicles' element={<VehicleList/>}/>
+          <Route path='/films' element={<FilmsList/>}/>
+          <Route path ="/starships/:starshipUrl" element={<StarshipsPage/>}/>
+          <Route path ="/films/:filmsUrl" element={<FilmsPage/>}/>
+          <Route path ="/people/:peopleUrl" element={<PeoplePage/>}/>
+          <Route path='/planets/:planetsUrl' element={<PlanetsPage/>}/>
+          <Route path='/species/:speciesUrl' element={<SpeciesPage/>}/>
+          <Route path='/vehicles/:vehiclesUrl' element={<VehiclePage/>}/>
+          
 
         </Routes>
      

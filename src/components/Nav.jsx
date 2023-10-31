@@ -6,13 +6,13 @@ function Nav() {
     <div className="nav">
     
       <Link className="nav-link" to="/Home">Home</Link>
-      <Link className="nav-link" to="/StarshipsList">Starships</Link>
-      <Link className="nav-link" to="/PlanetsList">Planets</Link>
-      <Link className="nav-link" to="/PeopleList">People</Link>
-      <Link className="nav-link" to="/SpeciesList">Species</Link>
-      <Link className="nav-link" to="/VehiclesList">Vehicle</Link>
-      <Link className="nav-link" to="/FilmsList">Films</Link>
-      <Link className="nav-link" to="/FilmsTest">TESTTEST</Link>
+      <Link className="nav-link" to="/starships">Starships</Link>
+      <Link className="nav-link" to="/planets">Planets</Link>
+      <Link className="nav-link" to="/people">People</Link>
+      <Link className="nav-link" to="/species">Species</Link>
+      <Link className="nav-link" to="/vehicles">Vehicle</Link>
+      <Link className="nav-link" to="/films">Films</Link>
+   
     </div>
   );
 }
